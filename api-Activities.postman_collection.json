@@ -49,7 +49,7 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\"id\":1234567890,\"title\":\"TestData Andres\",\"dueDate\":\"2022-06-24T01:25:05.983Z\",\"completed\":true}"
+					"raw": "{\n    \"id\": 1234567890,\n    \"title\": \"TestData Andres\",\n    \"dueDate\": \"2022-06-24T01:25:05.983Z\",\n    \"completed\": true\n}"
 				},
 				"url": {
 					"raw": "https://fakerestapi.azurewebsites.net/api/v1/Activities",
@@ -63,6 +63,98 @@
 						"api",
 						"v1",
 						"Activities"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "put-activities-id",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "accept",
+						"value": "text/plain; v=1.0"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json; v=1.0"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"id\":0,\"title\":\"string\",\"dueDate\":\"2022-06-26T00:31:52.725Z\",\"completed\":true}"
+				},
+				"url": {
+					"raw": "https://fakerestapi.azurewebsites.net/api/v1/Activities/1",
+					"protocol": "https",
+					"host": [
+						"fakerestapi",
+						"azurewebsites",
+						"net"
+					],
+					"path": [
+						"api",
+						"v1",
+						"Activities",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get-activities-id",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "accept",
+						"value": "text/plain; v=1.0"
+					}
+				],
+				"url": {
+					"raw": "https://fakerestapi.azurewebsites.net/api/v1/Activities/1",
+					"protocol": "https",
+					"host": [
+						"fakerestapi",
+						"azurewebsites",
+						"net"
+					],
+					"path": [
+						"api",
+						"v1",
+						"Activities",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete-activities-id",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "accept",
+						"value": "*/*"
+					}
+				],
+				"url": {
+					"raw": "https://fakerestapi.azurewebsites.net/api/v1/Activities/1",
+					"protocol": "https",
+					"host": [
+						"fakerestapi",
+						"azurewebsites",
+						"net"
+					],
+					"path": [
+						"api",
+						"v1",
+						"Activities",
+						"1"
 					]
 				}
 			},
